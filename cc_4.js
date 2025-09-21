@@ -32,9 +32,9 @@ let products = [
 ];
 
 // Step 2 ^ //
-
+for (let product of products) {
     let discount = 0;
-    switch (products.category) {
+    switch (product.category) {
         case "Nintendo":
             discount = 0.05;
             break;
@@ -47,7 +47,9 @@ let products = [
         default: 0;
             discount = 0;
     };
-
+  let promoPrice = product.price * (1 - discount);
+    product.promoPrice = promoPrice.toFixed(2)
+}
 
 // Step 3 ^ //
 
@@ -66,20 +68,20 @@ let customers = [
     {
         customerNumber: "001",
         customerType: "Student",
-        cart: ["Hollow Knight Silksong"]
+        cart: "Hollow Knight Silksong"
     },
     {
         customerNumber: "002",
         customerType: "Student",
-        cart: ["Mario Kart World"]
+        cart: "Mario Kart World"
     },
     {
         customerNumber: "003",
         customerType: "Senior",
-        cart: ["Mario Kart 8 Deluxe"]
+        cart: "Mario Kart 8 Deluxe"
     }
 ];
 
-for (let customer of customers) {
-    
-}
+/* Step 5 Yeah I simply could not get part 5 and beyond no matter
+how much I trouble shooted I just dont know what to do for it or even how to start */
+console.log(products)
